@@ -7,6 +7,7 @@ export function NotesList({ notes, onAddNote, onRemoveNote , onUpdateNote}) {
         {notes.map(note =>
             <li className="note-preview-wrapper" key={note.id}>
                 <NotePreview note={note} onAddNote={onAddNote} onRemoveNote={onRemoveNote} onUpdateNote={onUpdateNote}/>
+                console.log(note)
             </li>
         )}
     </ul>

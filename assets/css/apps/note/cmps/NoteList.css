@@ -10,6 +10,10 @@
   width: 100%;
 }
 
+.note-container{
+  flex-wrap: nowrap
+}
+
 .note {
   border: 1px solid black;
   border-radius: 20px;

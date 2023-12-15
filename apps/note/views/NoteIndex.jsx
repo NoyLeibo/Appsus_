@@ -12,7 +12,7 @@ const NOTE_KEY = "noteDB";
 
 export function NoteIndex() {
   const [notes, setNotes] = useState(null);
-  const [typeOfInput, setTypeOfInput] = useState("NoteTxt"); // NoteTxt / NoteImg // NoteTodos
+  const [typeOfInput, setTypeOfInput] = useState("NoteTodos"); // NoteTxt / NoteImg // NoteTodos
 
   useEffect(() => {
     // כל פעם שעולה תשמור לי את הnotes
