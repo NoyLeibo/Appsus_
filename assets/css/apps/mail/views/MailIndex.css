@@ -1,0 +1,10 @@
+
+
+.mail-index{
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+}
+
+.mail-index > *:not(.mail-list) {
+    background-color: var(--mail-bg-color-filter);
+  }

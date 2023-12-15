@@ -1,0 +1,47 @@
+
+
+.mail-filter{
+    background-color: var(--mail-bg-color-filter);
+    color:var(--mail-color);
+    width: 14em;
+}
+
+
+.mail-filter .new-mail{
+    background-color: var(--mail-bg-color-new-mail);
+    padding: 0.5em;
+    margin-left: 2em;
+    margin-top: 0.5em;
+    border-radius: 1em;
+    width: 6em;
+
+}
+
+.mail-filter li {
+    margin-bottom: 0.3em;
+    padding: 0.5em;
+    border-radius: 1em;
+}
+
+.mail-filter .new-mail:hover{
+    box-shadow:10px 5px 5px var(--mail-shadow-color);
+    cursor: pointer;
+}
+
+.mail-filter li:hover{
+    cursor: pointer;
+    background-color: var(--mail-shadow-color);
+
+}
+
+.mail-filter li .clicked{
+    background-color: var(--mail-bg-color-filter-pressed);
+}
+
+.mail-filter li button{
+    font-family: inherit;
+    background-color: inherit;
+    color: inherit;
+    font-size: inherit;
+    border: none;
+}

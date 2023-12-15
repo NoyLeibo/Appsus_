@@ -1,0 +1,19 @@
+:root {
+    --main-bg-color: lightblue;
+
+
+
+    --mail-bg-color: #fafbfb;
+    --mail-bg-color-filter: #f2f6fc;
+    --mail-bg-color-read:#eaf1fb;
+    --mail-bg-color-new-mail:#c2e7ff;
+    --mail-bg-color-filter-pressed:#d3e3fd;
+
+
+    --mail-color:#001d35;
+    --mail-shadow-color:#b8b8b8;
+    --mail-color2:#dadce0;
+
+
+
+}

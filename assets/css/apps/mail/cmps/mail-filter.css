@@ -1,0 +1,4 @@
+.mail-filter{
+    background-color: var(--mail-bg-color-filter);
+    color:red;
+}

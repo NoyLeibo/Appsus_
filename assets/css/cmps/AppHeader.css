@@ -1,0 +1,36 @@
+header {
+
+    background-color: var(--mail-bg-color-new-mail);
+    color:var(--mail-bg-color)
+
+    
+}
+
+.app-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    font-family: 'Edu VIC WA NT Beginner', cursive;
+
+}
+
+nav a {
+    margin: .5em;
+    font-size: 1.5em;
+
+}
+
+nav a:hover {
+    color:var(--mail-shadow-color)
+}
+
+nav a.active {
+    color: darkblue;
+    font-weight: bold;
+}
+
+header h3{
+    font-size: 1.7em;
+    font-weight: bold;
+    margin-left: 1em;
+}
