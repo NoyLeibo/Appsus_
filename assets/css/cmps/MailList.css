@@ -1,24 +1,32 @@
  .mail-list {
+   
     background-color: var(--mail-bg-color);
     color:var(--mail-color);
     max-width: 100%;
     padding: 1em;
+    
     border-radius: 0.5em;
+   
  }
 
  .mail-list tr{
  box-shadow:1px 1px 0px var(--mail-shadow-color);
- font-size: 1.4em;
+ font-size: 1em;
  
  }
 
+ .mail-list tr .read{
+   background-color:--mail-color2 ;
+   font-weight: bold;
+ }
+
 .mail-list td{
-  padding: 0.7em;  
+  padding: 0.5em;  
 
 }
 
 .mail-list .deliveryDate{
-   width:4em;
+   width:6em;
 }
 
 
@@ -36,6 +44,10 @@
    background-color: var(--mail-shadow-color);
 }
 
+.mail-list tr .read{
+   font-weight: bold;
+   background-color: var(--mail-color2);
+}
 
 .search-box{
    margin: 1em; 
@@ -83,8 +95,8 @@
 .newMail{
    position: absolute;
    background-color: var(--mail-bg-color);
-   height: 20em;
-   width: 15em;
+   height: 28em;
+   width: 25em;
    padding: 1em;
    border: 1px solid var(--mail-shadow-color);
    bottom:0;
@@ -94,20 +106,29 @@
    width: 100%;
 }
 
-.newMail button{
+.newMail  .submit{
    background-color: var(--mail-bg-color-new-mail);
    border-radius: 0.7em;
    font-size: 1em;
    padding: 0.3em;
-   margin-top: 1em;
+   margin-top: 0.3em;
    margin-left: 0.5em;
 }
 
 .newMail .body{
    height:60%;
+   width: 100%;
    
 }
 
 .newMail button:hover{
    cursor: pointer;
+}
+
+.newMail  .close{
+   position: relative;
+   background-color: rgb(230, 121, 121);
+   border-radius: 0;
+   margin-left: 90%;
+   margin-top: 0.5em;
 }

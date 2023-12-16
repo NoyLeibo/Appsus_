@@ -1,7 +1,6 @@
 import { utilService } from '../../../services/util.service.js'
 import { storageService } from '../../../services/async-storage.service.js'
-import { LocalStorageService } from '../../../services/storage.service.js'
-
+import { storagesService } from '../../../services/storage.service.js'
 const KEY = 'emailDB'
 let gEmail=[]
 //var gFilterBy = { txt: '', price: 0 }
@@ -13,10 +12,8 @@ export const mailService = {
     getEmptyMail,
     getDefaultFilter,
     save,
-    /*remove,
-    
-    
-    getNextBookId,
+    remove, 
+    /*getNextBookId,
     getFilterBy,
     setFilterBy,
     findBookIdx,*/
@@ -42,11 +39,11 @@ function query(filterBy) {
 function get(mailId) {
     return storageService.get(KEY, mailId)
 }
-/*
-function remove(bookId) {
+
+function remove(mailId) {
   
-    return storageService.remove(BOOK_KEY, bookId)
-}*/
+    return storageService.remove(KEY, mailId)
+}
 
 function save(mail) {
     if (mail.id) {
@@ -122,7 +119,7 @@ function getDefaultFilter(){
 
 
 function _saveMailsToStorage() {
-    LocalStorageService.saveToStorage(KEY, gEmail)
+  storageService.save(KEY, gEmail)
 }
 
 
@@ -149,14 +146,14 @@ gEmail= [
         from: 'yes-service@co.il',
         fromName:'YES',
         to: 'user@appsus.com',
-        isStar:false,
+        isStar:true,
 
         },
     {
         id: 'e103',
         subject: 'Hello!',
         body: utilService.makeLorem(50),
-        isRead: false,
+        isRead: true,
         sentAt : 1552233810594,
         removedAt : null,
         from: 'danF@momo.com',
@@ -169,13 +166,13 @@ gEmail= [
         id: 'e104',
         subject: 'Your bill is here',
         body: 'It is waiting for you in the link below',
-        isRead: false,
+        isRead: true,
         sentAt : 1552123790594,
         removedAt : null,
         from: 'service@momo.com',
         fromName:'ServiceMail',
         to: 'user@appsus.com',
-        isStar:false,
+        isStar:true,
 
         },
         {
@@ -195,7 +192,7 @@ gEmail= [
         id: 'e106',
         subject: 'Hello my friend!',
         body: utilService.makeLorem(100),
-        isRead: false,
+        isRead: true,
         sentAt : 1551883600594,
         removedAt : null,
         from: 'Shir@Shir.com',
@@ -221,7 +218,7 @@ gEmail= [
         id: 'e108',
         subject: 'Shabat Shalom',
         body: utilService.makeLorem(50),
-        isRead: false,
+        isRead: true,
         sentAt : 1551345500594,
         removedAt : null,
         from: 'Shir@Shir.com',
@@ -240,7 +237,7 @@ gEmail= [
         from: 'Super-Pharm@Super-Pharm.com',
         fromName:'Super-Pharm',
         to: 'user@appsus.com',
-        isStar:false,
+        isStar:true,
 
         },
          {
@@ -255,4 +252,82 @@ gEmail= [
         to: 'user@appsus.com',
         isStar:false,
         }
-    ]
+    ,
+{
+    id: 'e111',
+    subject: 'Miss you!',
+    body: utilService.makeLorem(20),
+    isRead: false,
+    sentAt : 1551463580594,
+    removedAt : null,
+    from: 'user@appsus.com',
+    fromName:'user',
+    to: 'Shir Odel',
+    isStar:false,
+
+    },
+     {
+    id: 'e112',
+    subject: 'Shabat Shalom',
+    body: utilService.makeLorem(50),
+    isRead: false,
+    sentAt : 1551345500594,
+    removedAt : null,
+    from: 'user@appsus.com',
+    fromName:'user',
+    to: 'Dana or',
+    isStar:false,
+
+    },
+     {
+    id: 'e113',
+    subject: 'Updating Info',
+    body: 'Hi,I want to update my info',
+    isRead: false,
+    sentAt : 1551233440594,
+    removedAt : null,
+    from: 'user@appsus.com',
+    fromName:'user',
+    to: 'Super-Pharm',
+    isStar:false,
+
+    },
+     {
+    id: 'e114',
+    subject: 'Information',
+    body: 'The information you wanted is here, in the link below:',
+    isRead: false,
+    sentAt : 1551120330594,
+    removedAt : null,
+    from: 'user@appsus.com',
+    fromName:'user',
+    to: 'ServiceMail',
+    isStar:false,
+    }
+    ,
+    {
+        id: 'e113',
+        subject: 'Updating Info',
+        body: 'Hi,I want to update my info',
+        isRead: false,
+        sentAt : null,
+        removedAt : null,
+        from: 'user@appsus.com',
+        fromName:'user',
+        to: 'Super-Pharm',
+        isStar:false,
+    
+        },
+         {
+        id: 'e114',
+        subject: 'Information',
+        body: 'The information you wanted is here, in the link below:',
+        isRead: false,
+        sentAt : null,
+        removedAt : null,
+        from: 'user@appsus.com',
+        fromName:'user',
+        to: 'ServiceMail',
+        isStar:false,
+        }
+]
