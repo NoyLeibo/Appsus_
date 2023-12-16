@@ -8,7 +8,7 @@ export function LongTxt({ txt }) {
   }
 
   function getTxtToShow (isLongTxtShown, txt) {
-    if (txt.length < 100) return txt
+    if (txt.length < 60) return txt
     return isLongTxtShown ? txt : txt.substring(0, 100) + '...'
   }
 

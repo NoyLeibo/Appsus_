@@ -23,12 +23,11 @@
 
 /* cmps-notes */
 
-/* Home */
-/* @import '../css/apps/home/home.css'; למחוקקקקקק */
-
 /* Cmps */
 
 /* @import './cmps/UserMsg.css'; */
 @import './cmps/AppHeader.css';
+@import './cmps/UserMsg.css'; 
+
 
 /* @import './apps/mail/cmps/MailList.css'; */

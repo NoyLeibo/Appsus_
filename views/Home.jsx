@@ -9,7 +9,7 @@ export function Home() {
            <h1>Welcome to the Appsus app</h1>
            <h3>What would you like to do?</h3>
            <nav>
-            <NavLink className="nav" to="/mail">Go to the email</NavLink>
+            <NavLink className="nav" to="/mail/cmps/inbox">Go to the email</NavLink>
             <NavLink className="nav" to="/note">Go to the notes</NavLink>
         </nav>
         </div>

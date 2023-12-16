@@ -4,16 +4,18 @@
     background-color: var(--mail-bg-color-filter);
     color:var(--mail-color);
     width: 14em;
+   
 }
 
 
-.mail-filter .new-mail{
+.mail-filter h1{
     background-color: var(--mail-bg-color-new-mail);
     padding: 0.5em;
     margin-left: 2em;
     margin-top: 0.5em;
     border-radius: 1em;
     width: 6em;
+    font-size: 1em;
 
 }
 
