@@ -24,44 +24,6 @@ const demoNotes = [
   },
   {
     id: "n102",
-    type: "NoteImg",
-    isPinned: false,
-    info: {
-      url: "https://www.delscookingtwist.com/wp-content/uploads/2022/01/Easy-Fluffy-American-Pancakes_1.jpg",
-      title: "we love pancake",
-    },
-    style: { backgroundColor: "rgb(255, 227, 210)" },
-  },
-  {
-    id: "n103",
-    type: "NoteTodos",
-    isPinned: false,
-    info: {
-      title: "Get my stuff together",
-      todos: [
-        { txt: "1.Driving license", doneAt: null },
-        { txt: "2.Coding power", doneAt: null },
-      ],
-    }
-  },
-  {
-    id: "n104",
-    createdAt: 1112222,
-    type: "NoteTxt",
-    isPinned: true,
-    style: { backgroundColor: "#CEFBEC" },
-    info: { txt: "I hate sprint 3!!!!!!!" },
-  },
-  {
-    id: "n105",
-    createdAt: 1112222,
-    type: "NoteTxt",
-    isPinned: true,
-    style: { backgroundColor: "#b5c1ff" },
-    info: { txt: "WHY?!!?!" },
-  },
-  {
-    id: "n106",
     type: "NoteTodos",
     isPinned: false,
     info: {
@@ -73,6 +35,44 @@ const demoNotes = [
         { txt: "4. 1", doneAt: null },
       ],
     }
+  },
+  {
+    id: "n103",
+    type: "NoteImg",
+    isPinned: false,
+    info: {
+      url: "https://www.delscookingtwist.com/wp-content/uploads/2022/01/Easy-Fluffy-American-Pancakes_1.jpg",
+      title: "we love pancake",
+    },
+    style: { backgroundColor: "rgb(255, 227, 210)" },
+  },
+  {
+    id: "n104",
+    type: "NoteTodos",
+    isPinned: false,
+    info: {
+      title: "Get my stuff together",
+      todos: [
+        { txt: "1.Driving license", doneAt: null },
+        { txt: "2.Coding power", doneAt: null },
+      ],
+    }
+  },
+  {
+    id: "n105",
+    createdAt: 1112222,
+    type: "NoteTxt",
+    isPinned: true,
+    style: { backgroundColor: "#CEFBEC" },
+    info: { txt: "I hate sprint 3!!!!!!!" },
+  },
+  {
+    id: "n106",
+    createdAt: 1112222,
+    type: "NoteTxt",
+    isPinned: true,
+    style: { backgroundColor: "#b5c1ff" },
+    info: { txt: "WHY?!!?!" },
   },
   {
     id: "n107",
