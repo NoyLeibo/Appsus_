@@ -12,7 +12,7 @@ const NOTE_KEY = "noteDB";
 
 export function NoteIndex() {
   const [notes, setNotes] = useState(null);
-  const [typeOfInput, setTypeOfInput] = useState("NoteTodos"); // NoteTxt / NoteImg // NoteTodos
+  const [typeOfInput, setTypeOfInput] = useState("NoteTxt"); // NoteTxt / NoteImg // NoteTodos
 
   useEffect(() => {
     // כל פעם שעולה תשמור לי את הnotes
@@ -43,12 +43,18 @@ export function NoteIndex() {
     });
   }
 
-  function onPinNote(note){
-    note.isPinned = !note.isPinned
-    console.log(note.isPinned);
-    onUpdateNote(note)
-
+  function onPinNote(note) {
+    note.isPinned = !note.isPinned;
+    setNotes((prevNotes) => {
+      const updatedNotes = prevNotes
+        .map((n) => (n.id === note.id ? note : n))
+        .sort((a, b) => (b.isPinned ? 1 : a.isPinned ? -1 : 0));
+        noteService.save(updatedNotes[0]).then((updatedNote) => {
+        setNotes(updatedNotes);
+      });
+    });
   }
+  
 
   function onRemoveNote(noteId, ref) {
     utilService.animateCSS(ref, "backOutDown");

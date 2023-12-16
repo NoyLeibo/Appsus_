@@ -16,7 +16,7 @@ export function NoteTxt({ note, onRemoveNote, onPinNote }) {
         <button className="delete-btn" 
           onClick={() => {
             onPinNote(note);
-        }}>{(note.isPinned) ? <i class="fa-solid fa-link-slash fa-lg"></i> : <i class="fa-solid fa-syringe fa-lg"></i> }</button>
+        }}>{(note.isPinned) ? <i className="fa-solid fa-link-slash fa-lg"></i> : <i className="fa-solid fa-syringe fa-lg"></i> }</button>
       </div>
     </article>
   );
