@@ -15,6 +15,7 @@ export function SetNoteTxt({ onChangeType, onAddNote }) {
     "#c6f8cf",
     "#CEFBEC",
   ];
+  
   const handleColorPickerToggle = () => {
     setShowColorPicker(!showColorPicker);
   };

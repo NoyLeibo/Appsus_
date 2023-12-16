@@ -43,6 +43,13 @@ export function NoteIndex() {
     });
   }
 
+  function onPinNote(note){
+    note.isPinned = !note.isPinned
+    console.log(note.isPinned);
+    onUpdateNote(note)
+
+  }
+
   function onRemoveNote(noteId, ref) {
     utilService.animateCSS(ref, "backOutDown");
     noteService.remove(noteId).then(() => {
@@ -76,6 +83,7 @@ export function NoteIndex() {
           notes={notes}
           onUpdateNote={onUpdateNote}
           onRemoveNote={onRemoveNote}
+          onPinNote={onPinNote}
         />
       </section>
     </section>

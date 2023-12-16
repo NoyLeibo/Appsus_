@@ -9,7 +9,6 @@ export function SetNoteTodos({ onChangeType, onAddNote}) {
   const handleSave = () => {
     if (titleOfList && lines.length > 1){
       const newList = noteService.makeNewNoteList(titleOfList)
-      console.log(lines);
       lines.forEach((line, index) => {
         if (line === '') {
           console.log(line);

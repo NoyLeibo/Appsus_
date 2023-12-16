@@ -100,29 +100,7 @@ form {
   margin: 25px;
 }
 
-label {
-  color: #000000;
-  background-color: #b3d0d7;
-  border: 1px solid black;
-  padding: 10px 15px;
-  border-radius: 5px;
-  font-weight: bold;
-
-}
 
 input[type="file"] {
   display: none; /* הסתרת ה-input המקורי */
 }
-
-/* עיצוב עבור input[type="file"] במקרה של הקלקת ה-label */
-label:hover {
-  background-color: #759ca6;
-  transition: background-color 0.3s ease;
-
-}
-
-label:active{
-  box-shadow: 5px 5px 5px #2c4046;
-  background-color: #b3d0d7;
-}
-

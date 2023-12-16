@@ -19,8 +19,8 @@ const demoNotes = [
     createdAt: 1112222,
     type: "NoteTxt",
     isPinned: true,
-    style: { backgroundColor: "#FFE3D2" },
-    info: { txt: "Fullstack Me Baby!" },
+    style: { backgroundColor: "#c6f8cf" },
+    info: { txt: "Puki muki shuki kuki buki luki!" },
   },
   {
     id: "n102",
@@ -28,7 +28,7 @@ const demoNotes = [
     isPinned: false,
     info: {
       url: "https://www.delscookingtwist.com/wp-content/uploads/2022/01/Easy-Fluffy-American-Pancakes_1.jpg",
-      title: "Bobi and Me",
+      title: "we love pancake",
     },
     style: { backgroundColor: "rgb(255, 227, 210)" },
   },
@@ -40,11 +40,51 @@ const demoNotes = [
       title: "Get my stuff together",
       todos: [
         { txt: "1.Driving license", doneAt: null },
-        { txt: "2.Coding power", doneAt: 187111111 },
+        { txt: "2.Coding power", doneAt: null },
       ],
-    },
+    }
   },
-];
+  {
+    id: "n104",
+    createdAt: 1112222,
+    type: "NoteTxt",
+    isPinned: true,
+    style: { backgroundColor: "#CEFBEC" },
+    info: { txt: "I hate sprint 3!!!!!!!" },
+  },
+  {
+    id: "n105",
+    createdAt: 1112222,
+    type: "NoteTxt",
+    isPinned: true,
+    style: { backgroundColor: "#b5c1ff" },
+    info: { txt: "WHY?!!?!" },
+  },
+  {
+    id: "n106",
+    type: "NoteTodos",
+    isPinned: false,
+    info: {
+      title: "Sprint 3 missions",
+      todos: [
+        { txt: "1. quit the sprint.", doneAt: null },
+        { txt: "2. 1", doneAt: null },
+        { txt: "3. 1", doneAt: null },
+        { txt: "4. 1", doneAt: null },
+      ],
+    }
+  },
+  {
+    id: "n107",
+    type: "NoteImg",
+    isPinned: false,
+    info: {
+      url: "https://www.street-food.co.il/wp-content/uploads/2020/06/%D7%A7%D7%9C%D7%A6%D7%95%D7%A0%D7%94-%D7%A9%D7%95%D7%A7%D7%95%D7%9C%D7%94-%D7%9E%D7%97%D7%9C%D7%91%D7%AA-%D7%A2%D7%91%D7%A8%D7%99.jpg",
+      title: "I'm hungry",
+    },
+    style: { backgroundColor: "#FFD2E3" },
+  },
+]
 
 const NOTE_KEY = "noteDB";
 _createNotes();
@@ -91,7 +131,6 @@ function get(noteId) {
 }
 
 function save(note) {
-  console.log(note);
   if (note.id) {
     return storageService.put(NOTE_KEY, note);
   } else {
