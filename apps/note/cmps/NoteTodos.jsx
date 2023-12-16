@@ -7,7 +7,6 @@ export function NoteTodos({ note, onRemoveNote, onPinNote }) {
   const noteRef = useRef();
 
   function handleTaskToggle(note, index){
-    console.log(note.info.todos[index]);
     note.info.todos[index].isDone = !note.info.todos[index].isDone
     note.info.todos[index].doneAt = new Date()
     noteService.save(note)
